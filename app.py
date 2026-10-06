@@ -8,11 +8,11 @@ app = Flask(__name__)
 # ============================================================
 # MODEL FILES
 # ============================================================
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-XGBOOST_FILE = "xgboost_model.json"
-ISOLATION_FILE = "isolation_forest_model.pkl"
-
-
+XGBOOST_FILE = os.path.join(BASE_DIR, "xgboost_model.json")
+ISOLATION_FILE = os.path.join(BASE_DIR, "isolation_forest_model.pkl")
 # ============================================================
 # LOAD XGBOOST MODEL
 # ============================================================
